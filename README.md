@@ -202,7 +202,7 @@ Control total del sistema.
 # 📂 Estructura del proyecto
 
 ```bash
-PhotoStudioManagementSystem/
+PlataformaAdministracionEstudioFotografico/
 │
 ├── backend/                  # Backend del sistema
 ├── frontend/                 # Interfaz web
@@ -236,7 +236,7 @@ PhotoStudioManagementSystem/
 ## 1️⃣ Clonar repositorio
 
 ```bash
-git clone https://github.com/isairey/PhotoStudioManagementSystem.git
+git clone https://github.com/isairey/PlataformaAdministracionEstudioFotografico.git
 ```
 
 ---
@@ -244,7 +244,7 @@ git clone https://github.com/isairey/PhotoStudioManagementSystem.git
 ## 2️⃣ Entrar al proyecto
 
 ```bash
-cd PhotoStudioManagementSystem
+cd PlataformaAdministracionEstudioFotografico
 ```
 
 ---
@@ -309,34 +309,6 @@ http://localhost:3000
 - Seguridad avanzada
 - Control de accesos
 - Gestión de perfiles
-
----
-
-# 📸 Vista previa
-
-## 🖥️ Interfaces del sistema
-
-<div align="center">
-
-### 📸 Dashboard principal
-![Dashboard](https://dummyimage.com/1200x600/8E44AD/ffffff&text=Photo+Studio+Dashboard)
-
-### 📅 Gestión de eventos
-![Events](https://dummyimage.com/1200x600/9B59B6/ffffff&text=Event+Management)
-
-### 🎥 Reservaciones de equipos
-![Equipment](https://dummyimage.com/1200x600/6C3483/ffffff&text=Equipment+Reservations)
-
-### 👥 Administración de usuarios
-![Users](https://dummyimage.com/1200x600/7D3C98/ffffff&text=User+Management)
-
-### 📊 Panel administrativo
-![Admin](https://dummyimage.com/1200x600/5B2C6F/ffffff&text=Admin+Panel)
-
-### 📩 Sistema de notificaciones
-![Notifications](https://dummyimage.com/1200x600/4A235A/ffffff&text=Notifications+System)
-
-</div>
 
 ---
 
