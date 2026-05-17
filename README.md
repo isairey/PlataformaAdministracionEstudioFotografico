@@ -1,401 +1,429 @@
-# Photo Studio Management System - User Documentation
+<div align="center">
 
-## 1. Introduction
+<img width="220" src="https://cdn-icons-png.flaticon.com/512/3652/3652191.png" />
 
-This is the Photo Studio Management System. This document outlines the features and workflows for all users, from standard members to system administrators. The system is designed to manage user accounts, studio events, and equipment reservations.
+# 📸 Photo Studio Management System
 
-**Key Features:**
-- User account management with role-based access control
-- Event scheduling and staff assignment
-- Equipment inventory management and reservations
-- Approval workflows for reservations
-- Automated email notifications
-- Time-window based equipment availability checks
-- Soft-delete and data anonymization for GDPR compliance
+### Plataforma inteligente de administración para estudios fotográficos y reservas de equipo 🚀
 
-## 2. User Roles & Permissions
+<p align="center">
+  <b>Photo Studio Management System</b> es una plataforma moderna diseñada para gestionar eventos, usuarios, reservas de equipos y operaciones administrativas dentro de estudios fotográficos profesionales.
+</p>
 
-The system operates with a tiered hierarchy of user roles, each with specific permissions:
+<p align="center">
+  <img src="https://img.shields.io/badge/PhotoStudio-ManagementSystem-8E44AD?style=for-the-badge">
+  <img src="https://img.shields.io/badge/RoleBased-AccessControl-blue?style=for-the-badge">
+  <img src="https://img.shields.io/badge/Equipment-Reservation-success?style=for-the-badge">
+  <img src="https://img.shields.io/badge/OpenSource-Academic-orange?style=for-the-badge">
+</p>
 
-* **USER:**
-    * Manage their own profile (update details, change password).
-    * View available equipment.
-    * Create equipment reservations for personal use or for events they are assigned to.
-    * Cancel their own reservations.
-    * View event details.
+<p align="center">
+  <a href="#-acerca-del-proyecto">Acerca</a> •
+  <a href="#-módulos-del-sistema">Módulos</a> •
+  <a href="#-características">Características</a> •
+  <a href="#-tecnologías-utilizadas">Tecnologías</a> •
+  <a href="#-vista-previa">Vista previa</a>
+</p>
 
-* **MODERATOR:**
-    * All **USER** permissions.
-    * Create, update, and cancel events.
-    * Approve or reject pending event requests.
-    * Approve or reject pending equipment reservations.
-    * View all user profiles and reservation lists.
-
-* **ADMIN:**
-    * All **MODERATOR** permissions.
-    * Manage the equipment inventory (add, update, delete equipment).
-    * Manage all user accounts (except other **ADMINS** or **SUPER\_ADMINS**).
-    * Change user roles (to **USER** or **MODERATOR**).
-    * Manage events (create, update, cancel).
-    * Set a user's "**Active Member**" status.
-
-* **SUPER\_ADMIN:**
-    * Only one exists. Only role is to manage accounts and assign **ADMIN** roles. Cannot be modified by anyone else.
+</div>
 
 ---
 
-## 3. Account Management (All Users)
+# 🌌 Acerca del proyecto
 
-### 3.1. Registration
+**Photo Studio Management System** es un sistema avanzado orientado a la administración de estudios fotográficos, eventos y reservas de equipos profesionales.
 
-1.  Complete the registration form with your name, email, username, phone number, and password.
-2.  You will receive an email with a verification link.
-3.  Click the link to activate your account.
-    > **Note:** The verification token is valid for 30 minutes. If it expires, you must restart the registration process.
+La plataforma permite:
 
-**Registration Form View:**
-
-![Register Form](images/register.png)
-
-**Registration Requirements:**
-- **Name & Surname:** Must be at least 2 characters
-- **Email:** Must be a valid, unique email address
-- **Username:** Must be unique and 5-20 characters (alphanumeric, dots, underscores)
-- **Phone Number:** Valid international format (e.g., +48123456789) or 9 digits without prefix
-- **Password:** Minimum 8 characters, must include uppercase, lowercase, numbers, and special characters (@$!%*?&)
-
-### 3.2. Login & Password Reset
-* **Login:** Use your registered email address and password.
-
-**Login Form View:**
-
-![Login Form](images/login.png)
-
-* **Forgot Password:**
-    1.  Use the "Forgot Password" feature on the login page.
-    2.  Enter your email address.
-    3.  You will receive an email with a password reset link.
-    4.  Follow the link to set a new password.
-    5.  The password reset link is valid for **30 minutes**.
-
-**Login Tips:**
-- Password reset tokens are single-use and expire after 30 minutes
-- If your token expires, request a new password reset
-
-### 3.3. Profile Management
-From your profile, you can:
-- Edit your personal details (name, surname, phone)
-- Change your password using the dedicated password change form
-- View your current role and system access level
-- See your Active Member status (if applicable)
-
-**Main Navigation and Sidebar:**
-
-The sidebar navigation provides quick access to all major system features:
-- **Home/Dashboard:** Overview of your upcoming events and reservations
-- **Events:** Browse events, view details, and manage your participation
-- **Equipment:** Search, view details, and manage your equipment reservations
-- **Administration:** Admin features (for admins/moderators only)
-- **Logout:** Sign out of your account
-- **Requests:** View pending event requests and equipment reservations (for moderators/admins)
-
-![Sidebar Navigation](images/sidebar-view.png)
+- 📸 Gestionar estudios fotográficos
+- 👥 Administrar usuarios y roles
+- 📅 Organizar eventos
+- 🎥 Reservar equipos multimedia
+- 🔐 Controlar accesos
+- 📊 Supervisar operaciones
+- 📩 Automatizar notificaciones
+- ⚡ Gestionar disponibilidad en tiempo real
 
 ---
 
-## 3.4. Events Section
+# ✨ Características
 
-Events are the core of the Photo Studio Management System. They represent scheduled photoshoots, conferences, or other activities that require staff participation and equipment.
+## 📅 Gestión de eventos
 
-**Events List View:**
-![Events List View](images/events.png)
+- 📍 Programación de eventos
+- 👥 Asignación de personal
+- 📊 Supervisión de actividades
+- 🕒 Control de horarios
+- ⚡ Gestión de estados
 
-**Understanding Events:**
-- Events have a scheduled date, time, location, and type
-- Events require a specified number of staff members
-- Each event progresses through a lifecycle: PLANNED → COMPLETED or CANCELLED
-- Users can apply to participate in events
+---
 
-**Events Details View:**
-![Events Details View](images/join-event.png)
+## 🎥 Gestión de equipos
 
-**For Regular Users:**
-- Browse all available events
-- View event details (date, time, location, staff requirements)
-- Apply to participate in an event (click "Join Event")
-- View your assigned events
-- Check which events need equipment reservations
-- View assigned personnel to events
+- 📸 Inventario multimedia
+- 💡 Equipos de iluminación
+- 🎙️ Accesorios de audio
+- 📦 Reservaciones inteligentes
+- ⚡ Detección de conflictos
 
-**For Admins:**
-- Create new events with full details
-- Edit event information -time, location, type, staff count (only for PLANNED events)
-- Mark events as completed or cancel them (ADMINS only)
+---
 
-The Events section works closely with the Equipment Reservation system - once you're assigned to an event, you may need to reserve equipment for that event's duration.
+## 👥 Gestión de usuarios
 
-## 4. Equipment Reservation (User Flow)
+- 👤 Registro y autenticación
+- 🔐 Control de acceso por roles
+- 📄 Administración de perfiles
+- ⚡ Gestión de permisos
+- 🛡️ Seguridad avanzada
 
-This is the core feature for **USERS**.
+---
 
-### 4.1. Reservation Eligibility
-Your ability to reserve certain equipment depends on two factors:
+## 📩 Sistema automatizado
 
-1.  **Active Member Status:** Some equipment is restricted to "Active Members" only. This status is granted by an **ADMIN**.
-2.  **Statutory Event Flag:** Some equipment is designated for "Statutory Events" only. This equipment **cannot** be reserved for personal use (i.e., without linking it to a valid event).
+- 📧 Correos automáticos
+- 🔔 Notificaciones del sistema
+- 📅 Alertas de eventos
+- ⚡ Confirmaciones de reservas
+- 📊 Seguimiento administrativo
 
-### 4.2. Viewing Equipment Reservations & Search
+---
 
-You can view all your past and upcoming reservations, including the status of each item. This allows you to check if yout request has been approved, is still pending, or if any items were rejected, as well as analyze your reservation history.
+# 👨‍💼 Módulos del sistema
 
-![Equipment Reservations View](images/equipment-reservation.png)
+## 👤 User Module
 
-To find specific reservations, you can use the search and filter options.
+Este módulo permite a los usuarios administrar reservas y eventos.
 
-**Search Parameters:**
-- **Event Name:** Filter by the name of the event to which the reservation is linked
-- **Start/End Date/Time:** Dates of your reservation
-- **Status:** Filter by reservation status
+### Funcionalidades:
 
-The system performs **collision detection** to ensure:
-- Equipment is not double-booked
-- Your reservation duration doesn't conflict with approved or pending reservations from other users
-- You haven't exceeded your equipment category limits per user per category setting
+- 📸 Reservar equipos
+- 📅 Consultar eventos
+- 👥 Gestionar perfil
+- 📄 Ver historial
+- ⚡ Cancelar reservaciones
 
-### 4.3. Creating a New Reservation
-All new reservations are created with a **NOT_RESOLVED** status and must be approved by a **MODERATOR** or **ADMIN**.
+---
 
-**Creating a Reservation:**
+## 🛠️ Moderator Module
 
-![Add Equipment Reservation](images/add-equipment-reservation.png)
+Este módulo administra solicitudes y aprobaciones del sistema.
 
-* **Standard (Personal) Reservation:**
-    * Select equipment and a time range.
-    * Mark as **Private** if it's a personal use reservation.
-    * Mark as **Urgent** if it's a last-minute statuory event without created event.
+### Funcionalidades:
 
-* **Event-Linked Reservation:**
-    * You must first have **PENDING** or **APPROVED** status for the event request.
-    * When creating the reservation, you must link it to the event.
-    * The system will validate that:
-        * You are assigned to the event.
-        * The event status is **PLANNED**.
-        * The reservation dates fall within the event's date.
-    * Event-linked reservations may have different approval workflows.
+- ✅ Aprobar reservaciones
+- 📅 Gestionar eventos
+- 👥 Supervisar usuarios
+- 📊 Administrar solicitudes
+- ⚡ Controlar operaciones
 
-**Reservation Status Hierarchy:**
-Each equipment reservation has an overall status and individual item statuses:
-- **Reservation Status** (overall):
-  - **NOT_RESOLVED:** Items are still pending review (contains PENDING or APPROVED items)
-  - **RESOLVED:** All items have been finalized (all items are APPROVED, REJECTED, or CANCELLED)
-  - **CANCELLED:** The entire reservation has been cancelled
+---
 
-- **Item Status** (per equipment):
-  - **PENDING:** Awaiting moderator/admin approval
-  - **APPROVED:** Confirmed - equipment is booked for you
-  - **REJECTED:** Declined by moderator/admin
-  - **CANCELLED:** Cancelled by you or cascaded from event cancellation
+## 🔐 Admin Module
 
+Este módulo administra toda la plataforma y los recursos.
 
+### Funcionalidades:
 
-**Reservation Details:**
+- 👥 Gestión de usuarios
+- 🎥 Administración de inventario
+- 📊 Supervisión general
+- 🔐 Gestión de permisos
+- ⚡ Configuración avanzada
 
-![Reservation Details](images/equipment-reservation-details.png)
+---
 
-You can **CANCEL** individual equipment items within your reservation, provided:
-* The item status is **PENDING** or **APPROVED**.
-* The reservation's start time has not already passed.
+## 👑 Super Admin Module
 
-You can also cancel the entire reservation:
-* Cancelling all items will cascade to mark the reservation as **CANCELLED**.
+Control total del sistema.
 
-**Item Status Meanings:**
-- **PENDING:** Awaiting moderator/admin approval
-- **APPROVED:** Confirmed - equipment is booked for you
-- **REJECTED:** Declined by moderator/admin
-- **CANCELLED:** Cancelled by you or cascaded from event cancellation
+### Funcionalidades:
 
-**Reservation-Level Status Meanings:**
-- **NOT_RESOLVED:** The reservation contains items still being reviewed (PENDING or APPROVED states)
-- **RESOLVED:** All items in the reservation have final decisions (all are APPROVED, REJECTED, or CANCELLED)
-- **CANCELLED:** You cancelled the entire reservation
+- 🛡️ Gestión de administradores
+- 🔐 Control global
+- ⚡ Configuración principal
+- 👥 Administración de roles
+- 📊 Supervisión completa
 
-**Important:** If an event linked to your reservation is cancelled, all reservation items for that event will automatically be **REJECTED** with a notification email.
+---
 
-## 5. Moderator & Admin Guide
+# 🛠️ Tecnologías utilizadas
 
-### 5.1. Event Management
-**MODERATORS** and above can manage the full lifecycle of an event.
+## 🎨 Frontend
 
+<p>
+  <img src="https://skillicons.dev/icons?i=html,css,js,bootstrap" />
+</p>
 
-**Create Event:** Define the event's name, location, date/time, type, and number of people required.
+- HTML5
+- CSS3
+- JavaScript
+- Bootstrap
 
-**Create Event Form:**
+---
 
-![Create Event](images/create-event.png)
+## ⚙️ Backend
 
-**Event Creation Fields:**
-- **Name:** Event title (e.g., "Company Photoshoot", "Wedding Reception")
-- **Date & Time:** Must be in the future
-- **Location:** Where the event takes place
-- **Event Type:** Choose from the following:
-  - **KWF** - Concerts/Musical Events
-  - **SKN** - Student Organizations Events
-  - **WRSS** - WRSS Events
-  - **URSS** - URSS Events
-  - **AGH** - AGH-related Events
-  - **AKRE** - Accreditation Events
-  - **CM** - Cultural/Media Events
-  - **AKT** - Other Events
-  - **PRIVATE** - Private Events
-- **Number of People Required:** How many staff members needed
+<p>
+  <img src="https://skillicons.dev/icons?i=java,spring,nodejs" />
+</p>
 
-* **Update Event:** Modify the details of a **PLANNED** event.
+- Backend API
+- Gestión de autenticación
+- Role-Based Access Control
+- REST Architecture
 
-**Edit Event Form:**
+---
 
-![Edit Event](images/event-edit.png)
+## 🗄️ Base de datos
 
-    > **Note:** Updating an event will automatically send an email notification to all assigned participants.
-    
-* **Cancel Event:**
-    * This sets the event status to **CANCELLED**.
-    > **Important Cascade:** Cancelling an event will **automatically reject all** associated equipment reservations for all users and send an email notification to all participants.
-    
-* **Complete Event:** Mark an event as **COMPLETED** after it has occurred.
+<p>
+  <img src="https://skillicons.dev/icons?i=mysql,postgresql" />
+</p>
 
-**Event Status Lifecycle:**
-```
-PLANNED → (Update details, add/remove staff) → COMPLETED or CANCELLED
+- MySQL / PostgreSQL
+- Persistencia de datos
+- Relaciones SQL
+- Gestión de inventario
+
+---
+
+## 🧰 Herramientas
+
+<p>
+  <img src="https://skillicons.dev/icons?i=git,github,vscode" />
+</p>
+
+- Git
+- GitHub
+- Visual Studio Code
+
+---
+
+# 📂 Estructura del proyecto
+
+```bash
+PhotoStudioManagementSystem/
+│
+├── backend/                  # Backend del sistema
+├── frontend/                 # Interfaz web
+├── images/                   # Capturas del sistema
+├── database/                 # Scripts SQL
+├── services/                 # Servicios y lógica
+├── reservations/             # Gestión de reservas
+├── events/                   # Gestión de eventos
+├── users/                    # Administración de usuarios
+├── notifications/            # Correos y alertas
+├── README.md
+└── LICENSE
 ```
 
-### 5.2. Reservation Management
-**MODERATORS** and above are responsible for managing all equipment reservations.
+---
 
-**All Equipment Reservations (Moderator View):**
+# ⚡ Instalación
 
-![All Equipment Requests](images/all-equipment-requests.png)
+## 📋 Requisitos
 
-**Resolve/Approve Equipment Reservations:**
-
-![Resolve Equipment Request](images/resolve-equipment-request.png)
-
-* View all reservations containing **PENDING** equipment items (items awaiting approval).
-* **Approve:** Confirms specific equipment items for the reservation. The equipment is now officially booked.
-* **Reject:** Rejects specific items in the reservation. The equipment becomes available again.
-* **Modify:** Change approval decisions for individual items in an already-resolved reservation.
-
-**Understanding the Resolution Process:**
-When a user creates a reservation, they request multiple equipment items. Each item starts in **PENDING** status. As moderators, you decide:
-1. Which items to **APPROVE** (confirm booking)
-2. Which items to **REJECT** (decline booking)
-3. You can **MODIFY** these decisions after initial approval
-
-Once all items reach their final state (APPROVED, REJECTED, or CANCELLED), the overall reservation moves to **RESOLVED** status.
-
-**Detailed Resolution Interface:**
-
-![Detailed Resolution](images/resolve-equipment-request.png)
-
-**Handling Event Requests (Applications):**
-
-![Resolve All Event Requests](images/resolve-event-requests.png)
-
-**Individual Event Request:**
-
-![Resolve Single Event Request](images/resolve-singular-event-request.png)
-
-* Review users who have applied to participate in events.
-* **Approve:** Add the user to the event staff.
-* **Reject:** Decline the application.
-* Rejected applications do NOT assign users to the event.
+- Node.js
+- Java / Spring Boot
+- MySQL o PostgreSQL
+- Git
+- Navegador moderno
 
 ---
 
-## 6. Admin & Super Admin Guide
+# 🚀 Configuración del proyecto
 
-### 6.1. User Management
-**ADMINS** and above can manage user accounts.
+## 1️⃣ Clonar repositorio
 
-* **Change User Role:** Assign or change a user's role (e.g., promote a **USER** to **MODERATOR**).
-    * An **ADMIN** cannot modify other **ADMINS** or the **SUPER\_ADMIN**.
-    * Available roles: USER, MODERATOR, ADMIN
-    
-* **Set Active Member Status:** Grant or revoke a user's "Active Member" status, which affects their equipment eligibility.
-    * Active members have access to all equipment, including items restricted to active members only.
-    * This status can be toggled per user by ADMINs
-    
-* **Delete User:** Anonymize and deactivate a user account.
-    * This is a **soft-delete** for GDPR compliance
-    * User data is anonymized (name, email, etc.)
-    * User cannot log in after deletion
-    * All future reservations are automatically cancelled
-
-**User Management Best Practices:**
-- Only promote to MODERATOR/ADMIN users you trust
-- Regularly review Active Member status during performance reviews
-- Document user deletions for compliance purposes
-
-### 6.2. Equipment (Inventory) Management
-**ADMINS** and above control the equipment inventory.
-
-**Equipment Admin Panel View:**
-
-![Equipment Admin](images/equipment-admin.png)
-
-**Event Admin Panel View:**
-
-![Event Admin](images/event-admin.png)
-
-* **Create Equipment:** Add new equipment to the system. You must define:
-    * Name & Category
-    * **Active Member Flag:** (Is this item only for active members?)
-    * **Statutory Event Flag:** (Is this item only for statutory events?)
-    
-**Equipment Categories:**
-- CAMERA - Professional cameras and bodies
-- LENS - Lenses and optical equipment  
-- BATTERY - Batteries and power supplies
-- STUDIO - Studio equipment (backdrops, props, etc.)
-- LIGHTING - Strobes, continuous lights, modifiers
-- TRIPOD - Tripods and stabilization equipment
-- ACCESSORIES - Filters, cables, adapters, etc.
-
-* **Update Equipment:** Change the name or flags of existing equipment. The category cannot be changed after creation.
-
-* **Delete Equipment:** Marks the equipment as "deleted," preventing any new reservations.
-    > **Warning:** This action does *not* automatically cancel existing reservations. A log warning is generated, and a moderator must manually cancel any future bookings for that item.
-
-**Equipment Status:**
-- **Deleted:** Unavailable for new reservations
+```bash
+git clone https://github.com/isairey/PhotoStudioManagementSystem.git
+```
 
 ---
 
-## 7. Automated Notifications
+## 2️⃣ Entrar al proyecto
 
-The system will automatically send you emails for key events:
-
-* **Account Verification:** On new user registration.
-* **Password Reset:** When you request a password reset.
-* **Event Modified:** When an event you are assigned to is updated.
-* **Event Cancelled:** When an event you are assigned to is cancelled.
-* **Reservation Approved:** When your equipment reservation is approved.
-* **Reservation Rejected:** When your equipment reservation is rejected.
-* **Event Assignment:** When you are added to or removed from an event.
-
-
-
-## 12. Terminology
-
-| Term | Definition |
-|------|-----------|
-| **Active Member** | User status granting access to all equipment |
-| **Approval Flow** | Process where MODERATOR reviews and approves pending reservations |
-| **Equipment Category** | Classification of equipment (CAMERA, LENS, LIGHTING, etc.) |
-| **Event Type** | Classification of events (KWF, SKN, PRIVATE, etc.) |
-| **Pending** | Status waiting for moderator/admin action |
-| **Role** | User's permission level (USER, MODERATOR, ADMIN, SUPER_ADMIN) |
-| **Statutory Event** | Official/formal event (vs. personal/private events) |
-| **Token** | Temporary code sent to email for verification or password reset |
+```bash
+cd PhotoStudioManagementSystem
+```
 
 ---
+
+## 3️⃣ Instalar dependencias
+
+```bash
+npm install
+```
+
+---
+
+## 4️⃣ Configurar base de datos
+
+Importar base SQL:
+
+```bash
+database/studio_management.sql
+```
+
+---
+
+## 5️⃣ Ejecutar servidor
+
+```bash
+npm start
+```
+
+---
+
+## 6️⃣ Abrir aplicación
+
+```bash
+http://localhost:3000
+```
+
+---
+
+# 📊 Funcionalidades principales
+
+## 📸 Gestión de estudios
+
+- Administración de sesiones
+- Programación de eventos
+- Gestión multimedia
+- Supervisión de actividades
+
+---
+
+## 🎥 Gestión de equipos
+
+- Inventario inteligente
+- Disponibilidad en tiempo real
+- Reservaciones automáticas
+- Gestión de categorías
+
+---
+
+## 👥 Administración de usuarios
+
+- Roles y permisos
+- Seguridad avanzada
+- Control de accesos
+- Gestión de perfiles
+
+---
+
+# 📸 Vista previa
+
+## 🖥️ Interfaces del sistema
+
+<div align="center">
+
+### 📸 Dashboard principal
+![Dashboard](https://dummyimage.com/1200x600/8E44AD/ffffff&text=Photo+Studio+Dashboard)
+
+### 📅 Gestión de eventos
+![Events](https://dummyimage.com/1200x600/9B59B6/ffffff&text=Event+Management)
+
+### 🎥 Reservaciones de equipos
+![Equipment](https://dummyimage.com/1200x600/6C3483/ffffff&text=Equipment+Reservations)
+
+### 👥 Administración de usuarios
+![Users](https://dummyimage.com/1200x600/7D3C98/ffffff&text=User+Management)
+
+### 📊 Panel administrativo
+![Admin](https://dummyimage.com/1200x600/5B2C6F/ffffff&text=Admin+Panel)
+
+### 📩 Sistema de notificaciones
+![Notifications](https://dummyimage.com/1200x600/4A235A/ffffff&text=Notifications+System)
+
+</div>
+
+---
+
+# 🧠 Objetivos del proyecto
+
+## 🎯 Aprendizaje y administración
+
+- Desarrollo de plataformas empresariales
+- Gestión de inventario multimedia
+- Sistemas de autenticación
+- Administración de eventos
+- Arquitectura web moderna
+- Automatización de procesos
+- Gestión avanzada de usuarios
+
+---
+
+# 🚧 Roadmap
+
+## 🔮 Próximas mejoras
+
+- 📱 Aplicación móvil
+- ☁️ Infraestructura cloud
+- 🤖 Inteligencia artificial
+- 📊 Analytics avanzados
+- 🔔 Notificaciones en tiempo real
+- 🌐 API REST moderna
+- 💳 Integración de pagos
+
+---
+
+# 🤝 Contribuciones
+
+Las contribuciones son bienvenidas ❤️
+
+## Cómo contribuir
+
+1. Fork del proyecto
+
+```bash
+git checkout -b feature/nueva-funcionalidad
+```
+
+2. Commit
+
+```bash
+git commit -m "✨ Nueva funcionalidad"
+```
+
+3. Push
+
+```bash
+git push origin feature/nueva-funcionalidad
+```
+
+4. Pull Request 🚀
+
+---
+
+# 👨‍💻 Desarrollador
+
+<div align="center">
+
+## Isai Reyes — Full Stack Developer
+
+Desarrollador apasionado por plataformas administrativas, automatización y sistemas multimedia 🚀
+
+</div>
+
+---
+
+# 🌟 Apoya el proyecto
+
+⭐ Dale una estrella  
+🍴 Haz fork  
+📢 Comparte el proyecto
+
+---
+
+# 📜 Licencia
+
+Proyecto open source bajo licencia MIT orientado al aprendizaje y administración de estudios fotográficos.
+
+---
+
+<div align="center">
+
+### 📸 Photo Studio Management System — administración inteligente de estudios y reservas 🚀
+
+</div>
