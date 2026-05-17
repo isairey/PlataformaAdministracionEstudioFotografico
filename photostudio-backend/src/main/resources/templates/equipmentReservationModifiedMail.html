@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pl" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Rezerwacja sprzętu zmodyfikowana</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+            padding: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+            padding: 25px;
+        }
+        h2 { text-align: center; }
+        .footer {
+            font-size: 12px;
+            color: #888;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h2>Rezerwacja sprzętu zmodyfikowana</h2>
+
+    <p>
+        Informujemy, że wcześniej rozpatrzony wniosek o wypożyczenie sprzętu został zmodyifkowany
+    </p>
+
+    <p>
+        Wydarzenie: <strong th:text="${eventName}">Nazwa wydarzenia</strong><br>
+        Data rozpoczęcia: <strong th:text="${startDate}">2024-01-01</strong>
+    </p>
+
+    <p><strong>Specyfikacja wypożyczonego sprzętu:</strong></p>
+    <ul>
+        <li th:each="item : ${items}">
+            <span th:text="${item.key}">Nazwa przedmiotu</span>:
+            <span th:text="${item.value ? 'Zatwierdzono' : 'Odrzucono'}"
+                  th:style="${item.value ? 'color: green;' : 'color: red;'}">
+                Status
+            </span>
+        </li>
+    </ul>
+
+    <p>
+        W przypadku pytań prosimy kontaktować się z moderatorami.<br><br>
+        Z wyrazami szacunku,<br>
+        <strong>Zespół moderujący</strong>
+    </p>
+
+    <hr style="border:none; border-top:1px solid #ddd; margin:30px 0;">
+
+    <p class="footer">
+        To jest automatyczne powiadomienie — prosimy <strong>nie odpowiadać</strong> na tę wiadomość.
+    </p>
+</div>
+</body>>

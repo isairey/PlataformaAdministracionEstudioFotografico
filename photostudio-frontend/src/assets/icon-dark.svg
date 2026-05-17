@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="6 6 40 40" width="40" height="40" role="img" aria-labelledby="title desc">
+  <title id="title">Logo FOTO dark</title>
+  <desc id="desc">Autorski symbol przyslony obiektywu bez napisu w czerni.</desc>
+
+  <g fill="#000000" transform="translate(2 2)">
+    <g transform="translate(24 24)">
+      <path d="M 0 -20 C 7 -20 12 -16 14 -10 L 5 -7 C 4 -10 2 -12 0 -12 Z" transform="rotate(0)" />
+      <path d="M 0 -20 C 7 -20 12 -16 14 -10 L 5 -7 C 4 -10 2 -12 0 -12 Z" transform="rotate(60)" />
+      <path d="M 0 -20 C 7 -20 12 -16 14 -10 L 5 -7 C 4 -10 2 -12 0 -12 Z" transform="rotate(120)" />
+      <path d="M 0 -20 C 7 -20 12 -16 14 -10 L 5 -7 C 4 -10 2 -12 0 -12 Z" transform="rotate(180)" />
+      <path d="M 0 -20 C 7 -20 12 -16 14 -10 L 5 -7 C 4 -10 2 -12 0 -12 Z" transform="rotate(240)" />
+      <path d="M 0 -20 C 7 -20 12 -16 14 -10 L 5 -7 C 4 -10 2 -12 0 -12 Z" transform="rotate(300)" />
+      <circle cx="0" cy="0" r="7" />
+    </g>
+  </g>
+</svg>

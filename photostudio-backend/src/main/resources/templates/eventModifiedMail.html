@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pl" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Wydarzenie edytowane</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background-color: #ffffff;
+      color: #333;
+      padding: 20px;
+    }
+    .container {
+      max-width: 600px;
+      margin: auto;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      padding: 25px;
+    }
+    h2 { text-align: center; }
+    .footer {
+      font-size: 12px;
+      color: #888;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <h2>Wydarzenie edytowane</h2>
+
+  <p th:inline="text">
+    Informujemy, że wydarzenie "<b>[[${eventName}]]</b>", zaplanowane pierwotnie na <b>[[${eventDate}]]</b>, zostało edytowane.
+    <br><br>
+    <b>Nowe dane wydarzenia:</b>
+    <br><br>
+    Lokalizacja: <b>[[${newEventLocation}]]</b><br>
+    Nazwa: <b>[[${newEventName}]]</b><br>
+    Data: <b>[[${newEventTime}]]</b>
+
+    <br><br>
+    W przypadku pytań lub niedostępności prosimy kontaktować się z moderatorami.
+    <br><br>
+    Zespół moderujący
+  </p>
+
+  <hr style="border:none; border-top:1px solid #ddd; margin:30px 0;">
+
+  <p class="footer">
+    To jest automatyczne powiadomienie — prosimy <strong>nie odpowiadać</strong> na tę wiadomość.
+  </p>
+</div>
+</body>
+</html>
